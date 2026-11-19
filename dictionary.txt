@@ -1,0 +1,30 @@
+# Custom dictionary for dictate.py
+#
+# One entry per line. Lines starting with # are ignored, and so are blank lines.
+# The file is re-read automatically when it changes, so there is no need to restart.
+#
+# All examples below are commented out. To use one, delete the leading "# ".
+#
+# ---------------------------------------------------------------------------
+# 1. Plain terms: words that must always be spelled exactly this way
+# ---------------------------------------------------------------------------
+# The LLM is told to use this spelling. Single words of 4+ characters are also
+# fuzzy-matched.
+#
+# Kubernetes
+# Keycloak
+# OpenTelemetry
+# PostgreSQL
+#
+# ---------------------------------------------------------------------------
+# 2. Replacements: heard => Correct
+# ---------------------------------------------------------------------------
+# For words the speech model consistently gets wrong. Left of "=>" is what the
+# transcript says, right is what you want. Case-insensitive, whole words only.
+# Use these for phrases, sound-alikes, and short words (under 4 characters).
+#
+# cube control => kubectl
+# post gres => Postgres
+# my sequel => MySQL
+#
+# Tip: dictate the word once and look at what gets pasted. That is your "heard" side.
